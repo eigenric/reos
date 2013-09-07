@@ -7,12 +7,12 @@
   <!-- <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css"> -->
 
   <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu+Mono"">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
   <meta name="author" content="{{ AUTHOR }}">
-  <meta name="description" content="Posts and writings by {{ AUTHOR }}">
+  <meta name="description" content="Posts y artículos por {{ AUTHOR }}">
 
   {% if FEED_ALL_ATOM %}
   <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -36,13 +36,13 @@
     <div id="user_meta">
       <a href="{{ SITEURL }}">
         {% if USER_LOGO_URL %}
-        <img src="{{ USER_LOGO_URL }}" alt="logo">
+        <img src="{{ USER_LOGO_URL }}" alt="logo" width=150px height=150px>
         {% else %}
         <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
         {% endif %}
       </a>
-      <h2><a href="{{ SITEURL }}">{{ AUTHOR }}</a></h2>
-      <p>{{ TAGLINE }}</p>
+      <h2><a href="{{ SITEURL }}">{{ SITENAME }}</a></h2>
+      <strong><p>{{ AUTHOR }}</p></strong><p>{{ TAGLINE }}</p>
       <ul>
         {% for title, link in MENUITEMS %}
         <li><a href="{{ link }}">{{ title }}</a></li>
@@ -64,7 +64,7 @@
     <header>
       {% block header %}
       <p>
-      <a href="{{ SITEURL }}">Index</a> &#124; <a href="{{ SITEURL }}/archives.html">Archives</a>
+      <a href="{{ SITEURL }}">Inicio</a> &#124; <a href="{{ SITEURL }}/archives.html">Archivo</a>
       {% if FEED_ALL_ATOM %}
       &#124; <a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Atom Feed</a>
       {% endif %}
@@ -84,7 +84,7 @@
     </footer>
 
     <div id="ending_message">
-      <p>&copy {{ AUTHOR }}. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/giulivo/pelican-svbhack" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>{% endif %}.</p>
+      <p>&copy {{ AUTHOR }}. Creado con <a href="http://getpelican.com" target="_blank">Pelican</a>. <a href="https://github.com/riki319/youngeek-theme" target="_blank">YounGeek-theme</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>{% endif %}.</p>
     </div>
   </main>
   {% include "modules/idl.html" %}

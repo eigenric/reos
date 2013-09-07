@@ -1,12 +1,13 @@
 {% extends "base.html" %}
+
 {% block head %}
-<meta name="keywords" content="{{ article.tags|join(', ')  }}">
+	<meta name="keywords" content="{{ article.tags|join(', ')  }}">
 {% endblock %}
 
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block header %}
-<p>Posted on {{ article.locale_date }}</p>
+	<p>Escrito el {{ article.locale_date }}</p>
 {% endblock %}
 
 {% block content %}
@@ -18,7 +19,7 @@
     {{ article.content }}
   </div>
   <div id="article_meta">
-    <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+    <p>Categoría: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
     {% if article.tags %}
     <p>Tags:
       {% for tag in article.tags %}
@@ -27,7 +28,7 @@
     </p>
     {% endif %}
     {% if DISQUS_SITENAME %}
-    <p>Comments: <a href="#" onclick="javascript:toggleComments();return false;">toggle</a></p>
+    <p>Comentarios: <a href="#" onclick="javascript:toggleComments();return false;">Mostrar</a></p>
     {% endif %}
   </div>
 
@@ -49,7 +50,7 @@
 {% endblock %}
 
 {% block footer %}
-<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a></p>
+<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Volver al inicio</a></p>
 <script language="javascript">
     function toggleComments() {
         var commentDiv = document.getElementById("article_comments");

@@ -1,15 +1,18 @@
 {% if DEFAULT_PAGINATION %}
-<p id="paginator">
-{% if articles_page.has_next() %}
-<a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html" class="button_accent">&larr; Older Posts</a>
-{% endif %}
+	<p id="paginator">
+		{% if articles_page.has_next() %}
+			<a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html" class="button_accent">&larr; Posts más antiguos</a>
+		{% endif %}
 
-{% if articles_page.has_previous() %}
-{% if articles_page.previous_page_number() == 1 %}
-<a href="{{ SITEURL }}/{{ page_name }}.html" class="button_accent">Newer Posts &rarr;</a>
-{% else %}
-<a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html" class="button_accent">Newer Posts &rarr;</a>
-{% endif %}
-{% endif %}
-</p>
+		{% if articles_page.has_previous() %}
+			{% if articles_page.previous_page_number() == 1 %}
+				<a href="{{ SITEURL }}/{{ page_name }}.html" class="button_accent">Posts más recientes &rarr;</a>
+			{% else %}
+			
+			<a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html" class="button_accent">Posts más recientes  &rarr;</a>
+	
+			{% endif %}
+
+		{% endif %}
+	</p>
 {% endif %}

@@ -2,20 +2,21 @@
 {% block title %}{{ page.title }}{% endblock %}
 
 {% block header %}
-<p>Updated on {{ page.locale_date }}</p>
+	<p>Actializado el {{ page.locale_date }}</p>
 {% endblock %}
 
 {% block content %}
-<article>
-  <div id="article_title">
-    <h3><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h3>
-  </div>
-  <div id="article_text">
-    {{ page.content }}
-  </div>
-</article>
+	<article>
+	  <div id="article_title">
+	    <h3><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h3>
+	  </div>
+	
+	  <div id="article_text">
+	    {{ page.content }}
+	  </div>
+	</article>
 {% endblock %}
 
 {% block footer %}
-<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a></p>
+	<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Volver al inicio</a></p>
 {% endblock %}
