@@ -36,8 +36,8 @@
   <aside>
     <div id="user_meta">
       <a href="{{ SITEURL }}">
-        {% if USER_LOGO_URL %}
-        <img src="{{ USER_LOGO_URL }}" alt="logo" width=150px height=150px>
+        {% if USER_LOGO %}
+        <img src="{{ SITEURL }}/images/{{ USER_LOGO }}" alt="logo" width=150px height=150px>
         {% else %}
         <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
         {% endif %}
